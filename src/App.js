@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/app.scss";
+import React, { useState } from "react";
+import Nav from "./components/Nav";
+import Landing from "./pages/Landing";
+import Destination from "./pages/Destination";
+import Explore from "./pages/Explore";
+import Category from "./pages/Category";
+import Posts from "./components/Posts";
+
+// Router Imports
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  // State
+  const [isActive, setActive] = useState("false");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav isActive={isActive} setActive={setActive} />
+      <Routes>
+        <Route path="/" exact element={<Landing />} />
+        <Route path="/explore" exact element={<Explore />} />
+        <Route path="/explore/:id" exact element={<Category />} />
+        <Route path="/explore/:id/:id" exact element={<Destination />} />
+      </Routes>
     </div>
   );
 }

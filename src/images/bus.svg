@@ -1,0 +1,27 @@
+<svg id="bus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.022" height="22.583" viewBox="0 0 37.022 22.583">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_78" data-name="Rectangle 78" width="37.022" height="22.583" fill="none" stroke="#eee" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <line id="Line_97" data-name="Line 97" x1="14.639" transform="translate(11.35 19.289)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <g id="Group_2886" data-name="Group 2886">
+    <g id="Group_2885" data-name="Group 2885" clip-path="url(#clip-path)">
+      <path id="Path_3919" data-name="Path 3919" d="M5.152,19.4H1.612A1.362,1.362,0,0,1,.25,18.035V3.11A2.86,2.86,0,0,1,3.11.25H32.1a5.32,5.32,0,0,1,4.671,2.77,1.727,1.727,0,0,1-1.518,2.552H25.942v6.981h7A2.256,2.256,0,0,1,35.2,14.808v3.227A1.362,1.362,0,0,1,33.842,19.4H32.4" transform="translate(-0.109 -0.109)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <rect id="Rectangle_76" data-name="Rectangle 76" width="7.33" height="5.222" transform="translate(4.086 5.776)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3920" data-name="Path 3920" d="M52.338,10.217l3.25,6.656Z" transform="translate(-22.751 -4.441)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <rect id="Rectangle_77" data-name="Rectangle 77" width="7.352" height="13.539" transform="translate(14.453 5.749)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3921" data-name="Path 3921" d="M48.82,4.948h0Z" transform="translate(-21.222 -2.151)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3922" data-name="Path 3922" d="M50.632,13.965l1.332,2.765Z" transform="translate(-22.01 -6.071)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3923" data-name="Path 3923" d="M37.434,19.454h0Z" transform="translate(-15.794 -8.457)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3924" data-name="Path 3924" d="M13.712,10.217v0Z" transform="translate(-5.961 -4.441)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3925" data-name="Path 3925" d="M25.567,26.02h0Z" transform="translate(-11.114 -11.311)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3926" data-name="Path 3926" d="M25.567,30.083h0Z" transform="translate(-11.114 -13.077)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3927" data-name="Path 3927" d="M61,26h0Z" transform="translate(-25.904 -11.303)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="3.153" cy="3.153" r="3.153" transform="translate(5.044 16.135)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="3.153" cy="3.153" r="3.153" transform="translate(25.989 16.135)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3928" data-name="Path 3928" d="M51.834,33.181a1.223,1.223,0,1,1-1.223-1.223A1.223,1.223,0,0,1,51.834,33.181Z" transform="translate(-21.469 -13.892)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3929" data-name="Path 3929" d="M14.783,33.181a1.223,1.223,0,1,1-1.223-1.223A1.223,1.223,0,0,1,14.783,33.181Z" transform="translate(-5.363 -13.892)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

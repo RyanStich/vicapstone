@@ -1,0 +1,23 @@
+<svg id="forest" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.45" height="33.441" viewBox="0 0 31.45 33.441">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_79" data-name="Rectangle 79" width="31.45" height="33.441" fill="none" stroke="#eee" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_2889" data-name="Group 2889">
+    <g id="Group_2888" data-name="Group 2888" clip-path="url(#clip-path)">
+      <path id="Path_3930" data-name="Path 3930" d="M20.543,13.146,16.8,8.456h3.626L13.983.375,7.538,8.456h3.626L4.333,17.02H8.387L.375,27.067H19.126" transform="translate(-0.138 -0.138)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+  <line id="Line_98" data-name="Line 98" y1="4.426" transform="translate(13.845 27.334)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <g id="Group_2891" data-name="Group 2891">
+    <g id="Group_2890" data-name="Group 2890" clip-path="url(#clip-path)">
+      <line id="Line_99" data-name="Line 99" y1="3.438" transform="translate(24.563 29.766)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3931" data-name="Path 3931" d="M41.615,27.051h0c0-4.263-3.461-12.043-6.65-12.043s-6.65,7.78-6.65,12.043,1.73,7.718,4.919,7.718H36.7C39.886,34.77,41.615,31.314,41.615,27.051Z" transform="translate(-10.401 -5.513)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_100" data-name="Line 100" y1="1.752" x2="1.398" transform="translate(11.758 4.487)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_101" data-name="Line 101" y1="3.395" x2="2.707" transform="translate(9.384 11.058)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_102" data-name="Line 102" y1="4.64" x2="3.738" transform="translate(6.584 19.231)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_3932" data-name="Path 3932" d="M33.3,28.744a11.6,11.6,0,0,1,1.813-5.9" transform="translate(-12.234 -8.392)" fill="none" stroke="#eee" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

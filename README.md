@@ -1,1 +1,1 @@
-# ExploreVI Capstone Project!
+# ExploreVI Capstone Project

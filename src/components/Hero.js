@@ -12,6 +12,7 @@ import tent from "../images/tent.svg";
 import signs from "../images/signs.svg";
 import logo from "../images/logo.svg";
 import Posts from "./Posts";
+import Cata from "./Cata";
 
 const Hero = () => {
   return (
@@ -33,15 +34,6 @@ const Hero = () => {
         </div>
       </div>
       <Posts />
-      <div className="category-slider">
-        <ul>
-          <li>
-            <a href="">
-              <img src={house} alt="" />
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
   );
 };

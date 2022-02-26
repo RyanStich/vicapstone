@@ -1,0 +1,40 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card-holder {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    overflow: hidden;
+
+    .vi-card {
+      position: relative;
+      display: block;
+      width: 200px;
+      border-radius: 24px;
+      background: #ffffff;
+      color: #11142d;
+      cursor: pointer;
+      /* -webkit-transform: translateY(-15px); */
+      /* -moz-transform: translateY(-15px); */
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+
+      .card__img {
+        height: 200px;
+        max-height: 200px;
+        img {
+          width: 100%;
+          border-radius: 24px 24px 0 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

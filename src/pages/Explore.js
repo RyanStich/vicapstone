@@ -6,6 +6,8 @@ import Cata from "../components/Cata";
 import Posts from "../components/Posts";
 
 const Explore = ({postData, Setpost}) => {
+
+
   return (
     <>
       <h1>Hllo</h1>

@@ -75,14 +75,17 @@ const SinglePost = ({ postData, Setpost }) => {
   const [filterSinglePost, SetfilterSinglePost] = useState([]);
 
   const url = useLocation();
+
   useEffect(() => {
-    const category = postData.filter(
-      (flicks) =>
-        `/explore/${flicks.categories[0]}/${flicks.slug.current}` ===
-        url.pathname
-    );
-    SetfilterSinglePost(category);
-    console.log(category);
+    const awaitData = async () => {
+      const category = postData.filter(
+        (flicks) =>
+          `/explore/${flicks.categories[0]}/${flicks.slug.current}` ===
+          url.pathname
+      );
+      SetfilterSinglePost(category);
+    };
+    awaitData().catch(console.error);
   }, [postData, url]);
 
   return (

@@ -13,6 +13,11 @@ export default {
       type: "url",
     },
     {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
+    {
         name: "icon",
         title: "Icon",
         type: 'image'
@@ -51,11 +56,6 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
     },
   ],
 

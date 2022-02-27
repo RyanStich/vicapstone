@@ -22,7 +22,7 @@ function App() {
   const [postData, Setpost] = useState(null);
   // const [cata, Setcata] = useState(null);
   // const [category, Setcategory] = useState(null);
-
+  const url = useLocation();
   useEffect(() => {
     sanityClient
       .fetch(
@@ -30,6 +30,7 @@ function App() {
       title,
       slug,
       link,
+      "body": body[],
       "categories": categories[]->title,
       mainImage {
           asset-> {
@@ -43,14 +44,13 @@ function App() {
       )
       .then((data) => Setpost(data))
       .catch(console.log("a"));
-  }, []);
+  }, [postData, url.pathname]);
 
-  console.log(postData);
+console.log(postData)
 
   return (
     <div className="App">
       <Nav isActive={isActive} setActive={setActive} />
-      
       <Routes>
         <Route path="/" exact element={<Landing postData={postData} Setpost={Setpost} />} />
         <Route path="/explore" exact element={<Explore postData={postData} Setpost={Setpost} />} />

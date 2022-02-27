@@ -8,11 +8,14 @@ const Cata = ({ postData, Setpost}) => {
   const [filteredData, setFilteredData] = useState([])
   const url = useLocation()
 
-  useEffect(() => {
-    const category = postData.filter((flicks) => `/explore/${flicks.categories[0]}` === url.pathname);
+  useEffect(() => { 
+    const waitForData = async () => {
+   const category = postData.filter((flicks) => `/explore/${flicks.categories[0]}` === url.pathname);
     setFilteredData(category);
     console.log(category)
-  }, [cata, url]);
+  }
+  waitForData().catch(console.error)
+}, [postData, url]);
 
 
 
@@ -37,6 +40,7 @@ const Cata = ({ postData, Setpost}) => {
                   </Link>
                   <div className="card__body">
                     <h3>{post.title}</h3>
+                    <p>{post.body[0].children[0].text}</p>
                   </div>
                 </div>
               ))}

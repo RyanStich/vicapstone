@@ -77,7 +77,7 @@ const Nav = ({ isActive, setActive }) => {
                 <div className="icon">
                   <img id="house" src={kayak} alt="" />
                 </div>
-                <div className="link__item">Home</div>
+                <div className="link__item">Lakes</div>
               </NavLink>
 
               <NavLink

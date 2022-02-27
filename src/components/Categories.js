@@ -2,7 +2,7 @@ import React from "react";
 import Posts from "./Posts";
 import Cata from "./Cata";
 
-const Hero = () => {
+const Categories = () => {
   return (
     <div className="holder">
       <div className="hero-container">
@@ -21,9 +21,9 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <Posts />
+      <Cata />
     </div>
   );
 };
 
-export default Hero;
+export default Categories;

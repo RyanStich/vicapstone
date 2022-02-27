@@ -27,7 +27,7 @@ function App() {
         <Route path="/" exact element={<Landing />} />
         <Route path="/explore" exact element={<Explore />} />
         <Route path="/explore/:id" exact element={<Category />} />
-        <Route path="/explore/:id/:id" exact element={<Destination />} />
+        <Route path="/explore/:id/:slug" exact element={<Destination />} />
       </Routes>
     </div>
   );

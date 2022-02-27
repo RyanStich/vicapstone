@@ -3,13 +3,14 @@ import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import { useLocation } from "react-router-dom";
 import Posts from "../components/Posts";
+import Singlepost from "../components/Singlepost";
 
 const Destination = () => {
   const url = useLocation();
 
   return (
     <>
-      <h1>Hello</h1>
+      <Singlepost />
     </>
   );
 };

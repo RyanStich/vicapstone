@@ -9,6 +9,16 @@ export default {
       type: 'string',
     },
     {
+      name: "link",
+      type: "url",
+    },
+    {
+        name: "icon",
+        title: "Icon",
+        type: 'image'
+
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

@@ -7,16 +7,14 @@ const Cata = () => {
   const [cata, Setcata] = useState([]);
 
   const [filteredData, setFilteredData] = useState([])
-
-  // const [fuck, Setfuck] = useState(null)
   const url = useLocation()
   useEffect( () => {
-    //         "categories": categories[]->title,
     sanityClient
       .fetch(
         `*[_type == "post"]{
         title,
         slug,
+        link,
         "categories": categories[]->title,
         mainImage {
             asset-> {
@@ -32,30 +30,19 @@ const Cata = () => {
       .catch(console.log("i am cata "));
   }, []);
 
-
-  const categoryNames = cata.filter((item) => {
-    return item.categories[0] === url.pathname;
-  })
-
-  // console.log(categoryNames)
+  // Working Code incase everything fails :)
+  // const categoryNames = cata.filter((item) => {
+  //   return `/explore/${item.categories[0]}` === url.pathname;
+  // })
 
 
+  useEffect(() => {
+    const category = cata.filter((flicks) => `/explore/${flicks.categories[0]}` === url.pathname);
+    setFilteredData(category);
+    console.log(category)
+  }, [cata, url]);
 
-  // console.log(categoryNames)
 
-  // const test = categoryNames.filter((flicks) => flicks === url.pathname);
-
-  // console.log(test)
-
-
-  // useEffect(() => {
-  //   const categorized = categoryNames.filter((datab) => datab.categories[0] === `/${url.pathname}`);
-  //   setFilteredData(categorized);
-  //   console.log(filteredData)
-  // }, [cata, url]);
-
-            {/* {categoryNames &&
-             categoryNames.map((post, index) => ( */}
 
   
   return (
@@ -63,14 +50,12 @@ const Cata = () => {
       <div className="main">
         <section>
           <div className="card-holder">
-            {cata &&
-             cata.map((post, index) => (
+           {filteredData &&
+             filteredData.map((post, index) => (
                 <div className="vi-card">
                   <Link
-                    to={
-                      "/explore/" + post.categories[0] + "/" + post.slug.current
-                    }
-                    key={post.slug.current}
+                    to={"/explore/" + post.categories[0] + "/" + post.slug.current} key={post.slug.current}
+
                   >
                     <div className="card__img">
                       <img
@@ -90,5 +75,7 @@ const Cata = () => {
     </>
   );
 };
+
+
 
 export default Cata;

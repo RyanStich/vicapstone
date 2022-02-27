@@ -13,6 +13,7 @@ const Posts = () => {
         `*[_type == "post"]{
       title,
       slug,
+      link,
       "categories": categories[]->title,
       mainImage {
           asset-> {
@@ -27,31 +28,45 @@ const Posts = () => {
       .then((data) => Setpost(data))
       .catch(console.log("a"));
   }, []);
+
+  console.log(postData);
   return (
     <>
       <div className="main">
         <section className="card-holder">
-            {postData &&
-              postData.map((post, index) => (
-                <div className="vi-card">
-                  <Link
-                    to={
-                      "/explore/" + post.categories[0] + "/" + post.slug.current
-                    }
-                    key={post.slug.current}
-                  >
-                    <div className="card__img">
-                      <img
-                        src={post.mainImage.asset.url}
-                        alt={post.mainImage.alt}
-                      />
-                    </div>
-                  </Link>
-                  <div className="card__body">
-                    <h3>{post.title}</h3>
+          {postData &&
+            postData.map((post, index) => (
+              <div className="vi-card">
+                <Link
+                  className="vi__route"
+                  to={
+                    "/explore/" + post.categories[0] + "/" + post.slug.current
+                  }
+                  key={post.slug.current}
+                >
+                  <div className="card__img">
+                    <img
+                      src={post.mainImage.asset.url}
+                      alt={post.mainImage.alt}
+                    />
                   </div>
+                </Link>
+                <div className="card__body">
+                  <h3>{post.title}</h3>
                 </div>
-              ))}
+                <div className="card__footer">
+                  <button>
+                    <a href={post.link} className="footer__link">
+                      Map View
+                    </a>
+                  </button>
+
+                  {/* <a className="footer__link" href={post.link}>
+                    <h3>Visit</h3>
+                    </a> */}
+                </div>
+              </div>
+            ))}
         </section>
       </div>
     </>

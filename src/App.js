@@ -19,15 +19,43 @@ function App() {
 
   // State
   const [isActive, setActive] = useState("false");
+  const [postData, Setpost] = useState(null);
+  // const [cata, Setcata] = useState(null);
+  // const [category, Setcategory] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "post"]{
+      title,
+      slug,
+      link,
+      "categories": categories[]->title,
+      mainImage {
+          asset-> {
+              _id,
+              url
+          },
+          alt,
+      }
+
+  }`
+      )
+      .then((data) => Setpost(data))
+      .catch(console.log("a"));
+  }, []);
+
+  console.log(postData);
+
   return (
     <div className="App">
       <Nav isActive={isActive} setActive={setActive} />
       
       <Routes>
-        <Route path="/" exact element={<Landing />} />
-        <Route path="/explore" exact element={<Explore />} />
-        <Route path="/explore/:id" exact element={<Category />} />
-        <Route path="/explore/:id/:slug" exact element={<Destination />} />
+        <Route path="/" exact element={<Landing postData={postData} Setpost={Setpost} />} />
+        <Route path="/explore" exact element={<Explore postData={postData} Setpost={Setpost} />} />
+        <Route path="/explore/:id" exact element={<Category postData={postData} Setpost={Setpost} />} />
+        <Route path="/explore/:id/:slug" exact element={<Destination postData={postData} Setpost={Setpost} />} />
       </Routes>
     </div>
   );

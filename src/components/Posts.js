@@ -2,32 +2,32 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client";
 
-const Posts = () => {
-  const [postData, Setpost] = useState(null);
-  const [cata, Setcata] = useState(null);
-  const [category, Setcategory] = useState(null);
+const Posts = ({ postData, Setpost }) => {
+  //   const [postData, Setpost] = useState(null);
+  //   const [cata, Setcata] = useState(null);
+  //   const [category, Setcategory] = useState(null);
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "post"]{
-      title,
-      slug,
-      link,
-      "categories": categories[]->title,
-      mainImage {
-          asset-> {
-              _id,
-              url
-          },
-          alt,
-      }
+  //   useEffect(() => {
+  //     sanityClient
+  //       .fetch(
+  //         `*[_type == "post"]{
+  //       title,
+  //       slug,
+  //       link,
+  //       "categories": categories[]->title,
+  //       mainImage {
+  //           asset-> {
+  //               _id,
+  //               url
+  //           },
+  //           alt,
+  //       }
 
-  }`
-      )
-      .then((data) => Setpost(data))
-      .catch(console.log("a"));
-  }, []);
+  //   }`
+  //       )
+  //       .then((data) => Setpost(data))
+  //       .catch(console.log("a"));
+  //   }, []);
 
   console.log(postData);
   return (

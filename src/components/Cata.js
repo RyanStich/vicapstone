@@ -2,49 +2,20 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import sanityClient from "../client";
 
-const Cata = () => {
+const Cata = ({ postData, Setpost}) => {
 
   const [cata, Setcata] = useState([]);
-
   const [filteredData, setFilteredData] = useState([])
   const url = useLocation()
-  useEffect( () => {
-    sanityClient
-      .fetch(
-        `*[_type == "post"]{
-        title,
-        slug,
-        link,
-        "categories": categories[]->title,
-        mainImage {
-            asset-> {
-                _id,
-                url
-            },
-            alt,
-        }
-
-    }`
-      )
-            .then((data) => Setcata(data))
-      .catch(console.log("i am cata "));
-  }, []);
-
-  // Working Code incase everything fails :)
-  // const categoryNames = cata.filter((item) => {
-  //   return `/explore/${item.categories[0]}` === url.pathname;
-  // })
-
 
   useEffect(() => {
-    const category = cata.filter((flicks) => `/explore/${flicks.categories[0]}` === url.pathname);
+    const category = postData.filter((flicks) => `/explore/${flicks.categories[0]}` === url.pathname);
     setFilteredData(category);
     console.log(category)
   }, [cata, url]);
 
 
 
-  
   return (
     <>
       <div className="main">

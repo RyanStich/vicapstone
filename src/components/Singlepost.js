@@ -71,52 +71,23 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import sanityClient from "../client";
 
-const SinglePost = () => {
-  const [cata, Setcata] = useState([]);
-
+const SinglePost = ({ postData, Setpost }) => {
   const [filterSinglePost, SetfilterSinglePost] = useState([]);
 
   const url = useLocation();
   useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "post"]{
-        title,
-        slug,
-        link,
-        "categories": categories[]->title,
-        mainImage {
-            asset-> {
-                _id,
-                url
-            },
-            alt,
-        }
-
-    }`
-      )
-      .then((data) => Setcata(data))
-      .catch(console.log("i am cata "));
-  }, []);
-
-  // Working Code incase everything fails :)
-  // const categoryNames = cata.filter((item) => {
-  //   return `/explore/${item.categories[0]}` === url.pathname;
-  // })
-
-  useEffect(() => {
-    const singular = cata.filter(
+    const category = postData.filter(
       (flicks) =>
         `/explore/${flicks.categories[0]}/${flicks.slug.current}` ===
         url.pathname
     );
-    SetfilterSinglePost(singular);
-    console.log(singular);
-  }, [cata, url]);
+    SetfilterSinglePost(category);
+    console.log(category);
+  }, [postData, url]);
 
   return (
     <>
-      <div className="main">
+      <div className="singlepost-main">
         <section>
           <div className="card-holder">
             {filterSinglePost &&

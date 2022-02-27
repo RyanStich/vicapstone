@@ -5,12 +5,12 @@ import { useLocation } from "react-router-dom";
 import Posts from "../components/Posts";
 import Singlepost from "../components/Singlepost";
 
-const Destination = () => {
+const Destination = ({postData ,Setpost}) => {
   const url = useLocation();
 
   return (
     <>
-      <Singlepost />
+      <Singlepost postData={postData} Setpost={Setpost} />
     </>
   );
 };

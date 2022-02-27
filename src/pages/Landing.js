@@ -4,10 +4,10 @@ import Hero from "../components/Hero";
 import Cata from "../components/Cata";
 
 
-const Landing = () => {
+const Landing = ({postData, Setpost}) => {
     return (
         <>
-                <Hero />
+                <Hero postData={postData} Setpost={Setpost}  />
         </>
     )
 }

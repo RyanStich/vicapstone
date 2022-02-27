@@ -2,7 +2,7 @@ import React from "react";
 import Posts from "./Posts";
 import Cata from "./Cata";
 
-const Hero = () => {
+const Hero = ({postData, Setpost}) => {
   return (
     <div className="holder">
       <div className="hero-container">
@@ -21,7 +21,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <Posts />
+      <Posts postData={postData} Setpost={Setpost} />
     </div>
   );
 };

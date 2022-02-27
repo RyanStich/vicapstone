@@ -37,10 +37,6 @@ const Posts = ({ postData, Setpost }) => {
                       Map View
                     </a>
                   </button>
-
-                  {/* <a className="footer__link" href={post.link}>
-                    <h3>Visit</h3>
-                    </a> */}
                 </div>
               </div>
             ))}

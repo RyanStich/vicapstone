@@ -16,12 +16,11 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 
 function App() {
-
   // State
   const [isActive, setActive] = useState("false");
   const [postData, Setpost] = useState(null);
-  // const [cata, Setcata] = useState(null);
-  // const [category, Setcategory] = useState(null);
+
+// Querying my sanity content management system, then taking my data and setting my state for postData
   const url = useLocation();
   useEffect(() => {
     sanityClient
@@ -46,7 +45,6 @@ function App() {
       .catch(console.log("a"));
   }, [postData, url.pathname]);
 
-console.log(postData)
 
   return (
     <div className="App">

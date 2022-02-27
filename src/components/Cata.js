@@ -4,10 +4,11 @@ import sanityClient from "../client";
 
 const Cata = ({ postData, Setpost}) => {
 
-  const [cata, Setcata] = useState([]);
+  
   const [filteredData, setFilteredData] = useState([])
   const url = useLocation()
 
+  // Async function to update our state, just incase a user refreshes on my site.
   useEffect(() => { 
     const waitForData = async () => {
    const category = postData.filter((flicks) => `/explore/${flicks.categories[0]}` === url.pathname);
@@ -16,8 +17,6 @@ const Cata = ({ postData, Setpost}) => {
   }
   waitForData().catch(console.error)
 }, [postData, url]);
-
-
 
   return (
     <>

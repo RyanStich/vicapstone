@@ -5,8 +5,6 @@ import Landing from "./pages/Landing";
 import Destination from "./pages/Destination";
 import Explore from "./pages/Explore";
 import Category from "./pages/Category";
-import Posts from "./components/Posts";
-import Cata from "./components/Cata";
 import sanityClient from "./client";
 
 // Router Imports

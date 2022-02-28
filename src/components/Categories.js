@@ -1,5 +1,4 @@
 import React from "react";
-import Posts from "./Posts";
 import Cata from "./Cata";
 
 const Categories = ({ postData, Setpost}) => {

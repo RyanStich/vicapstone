@@ -1,6 +1,5 @@
 import React from "react";
 import Posts from "./Posts";
-import Cata from "./Cata";
 
 const Hero = ({postData, Setpost}) => {
   return (

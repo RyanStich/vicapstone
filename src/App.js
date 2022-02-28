@@ -42,8 +42,10 @@ function App() {
   }`
       )
       .then((data) => Setpost(data))
-      .catch(console.log("a"));
-  }, [postData, url.pathname]);
+      .catch(console.log());
+  }, [url.pathname]);
+
+  console.log(postData)
 
 
   return (

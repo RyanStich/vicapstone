@@ -10,7 +10,9 @@ const Destination = ({postData ,Setpost}) => {
 
   return (
     <>
+        <div className="hold-on">
       <Singlepost postData={postData} Setpost={Setpost} />
+      </div>
     </>
   );
 };

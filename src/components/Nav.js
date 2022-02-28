@@ -105,14 +105,14 @@ const Nav = ({ isActive, setActive }) => {
               </NavLink>
               <NavLink
                 end
-                to="/explore/oceans"
+                to="/explore/beaches"
                 className={`menu__item ${(navData) =>
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
                   <img id="compass" src={signs} alt="" />
                 </div>
-                <div className="link__item">Oceans</div>
+                <div className="link__item">Beaches</div>
               </NavLink>
               <NavLink
                 end
@@ -138,14 +138,14 @@ const Nav = ({ isActive, setActive }) => {
               </NavLink>
               <NavLink
                 end
-                to="/explore/forests"
+                to="/explore/trails"
                 className={`menu__item ${(navData) =>
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
                   <img id="compass" src={forest} alt="" />
                 </div>
-                <div className="link__item">Forests</div>
+                <div className="link__item">Trails</div>
               </NavLink>
             </div>
             {/* Secondary Menu End *** END*/}

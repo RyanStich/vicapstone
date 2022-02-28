@@ -22,31 +22,28 @@ const SinglePost = ({ postData, Setpost }) => {
   return (
     <>
       <div className="singlepost-main">
-        <section>
-          <div className="card-holder">
-            {filterSinglePost &&
-              filterSinglePost.map((post, index) => (
-                <div className="vi-card">
-                  <Link
-                    to={
-                      "/explore/" + post.categories[0] + "/" + post.slug.current
-                    }
-                    key={post.slug.current}
-                  >
-                    <div className="card__img">
-                      <img
-                        src={post.mainImage.asset.url}
-                        alt={post.mainImage.alt}
-                      />
-                    </div>
-                  </Link>
-                  <div className="card__body">
-                    <h3>{post.title}</h3>
-                  </div>
+        <div className="single-card-holder">
+          {filterSinglePost &&
+            filterSinglePost.map((post, index) => (
+              <div className="vi-card">
+                <div
+                  className="card__img"
+                  style={{
+                    backgroundImage: `url("${post.mainImage.asset.url}")`,
+                  }}
+                >
+                  {/* <img
+                         src={post.mainImage.asset.url}
+                         alt={post.mainImage.alt}
+                      /> */}
                 </div>
-              ))}
-          </div>
-        </section>
+                <div className="card__body">
+                  <h3>{post.title}</h3>
+                  <p>{post.body[0].children[0].text}</p>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </>
   );

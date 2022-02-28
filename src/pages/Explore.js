@@ -10,7 +10,6 @@ const Explore = ({postData, Setpost}) => {
 
   return (
     <>
-      <h1>Hllo</h1>
       <Hero postData={postData} Setpost={Setpost}  />
     </>
   );

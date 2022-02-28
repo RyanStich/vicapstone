@@ -5,7 +5,6 @@ import sanityClient from "../client";
 const Posts = ({ postData, Setpost }) => {
   const url = useLocation();
 
-  console.log(postData);
   return (
     <>
       <div className="main">

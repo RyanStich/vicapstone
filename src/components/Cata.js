@@ -13,7 +13,6 @@ const Cata = ({ postData, Setpost }) => {
         (flicks) => `/explore/${flicks.categories[0]}` === url.pathname
       );
       setFilteredData(category);
-      console.log(category);
     };
     waitForData().catch(console.error);
   }, [postData, url]);

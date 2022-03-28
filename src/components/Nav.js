@@ -1,18 +1,26 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import house from "../images/house.svg";
 import star from "../images/star.svg";
 import chairs from "../images/chairs.svg";
 import backpack from "../images/backpack.svg";
 import bus from "../images/bus.svg";
 import compass from "../images/compass.svg";
+import search from "../images/search.svg";
 import forest from "../images/forest.svg";
 import kayak from "../images/kayak.svg";
 import tent from "../images/tent.svg";
 import signs from "../images/signs.svg";
 import logo from "../images/logo.svg";
+import arrow from "../images/arrow.svg";
 
 const Nav = ({ isActive, setActive }) => {
+  const [menuActive, SetMenuActive] = useState(false);
+
+  const toggleMe = () => {
+    menuActive ? SetMenuActive(false) : SetMenuActive(true);
+  };
+
   return (
     <div className="wrap">
       <div className="navbar">
@@ -50,14 +58,14 @@ const Nav = ({ isActive, setActive }) => {
               </NavLink>
               <NavLink
                 end
-                to="/favorites"
+                to="/search"
                 className={`menu__item ${(navData) =>
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="house" src={star} alt="" />
+                  <img id="search" src={search} alt="" />
                 </div>
-                <div className="link__item">Favorites</div>
+                <div className="link__item">Search</div>
               </NavLink>
               <div className="line"></div>
             </div>
@@ -153,7 +161,50 @@ const Nav = ({ isActive, setActive }) => {
         </div>
       </div>
       <div className="hero-nav">
-        <span>Locations</span>
+        <div className="press-me" onClick={toggleMe}>
+          <p>Explore Popular Categories</p>
+          <img
+            id="arrow"
+            className={menuActive ? "clickedit" : ""}
+            src={arrow}
+            alt=""
+          />
+        </div>
+
+        <div className={`hideme ${menuActive ? "" : "hider"} `}>
+          <Link
+            className="navigation__item"
+            to="/explore/lakes"
+            onClick={toggleMe}
+          >
+            <img className="menucon" src={kayak} alt="" />
+            <a href="/lakes">Lakes</a>
+          </Link>
+          <Link
+            className="navigation__item"
+            to="/explore/campsites"
+            onClick={toggleMe}
+          >
+            <img className="menucon" src={tent} alt="" />
+            <a href="">Campsites</a>
+          </Link>
+          <Link
+            className="navigation__item"
+            to="/explore/beaches"
+            onClick={toggleMe}
+          >
+            <img className="menucon" src={signs} alt="" />
+            <a href="">Beaches</a>
+          </Link>
+          <Link
+            className="navigation__item"
+            to="/explore/hiking"
+            onClick={toggleMe}
+          >
+            <img className="menucon" src={backpack} alt="" />
+            <a href="">Hiking</a>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import sanityClient from "../client";
 
-const Posts = ({ postData, Setpost }) => {
+const RV = ({ postData, Setpost }) => {
   const url = useLocation();
-  const [postDigit, SetPostDigit] = useState(9);
 
+  const [rvData, SetRvData] = useState([]);
+
+
+  // RV Data
   useEffect(() => {
-    SetPostDigit(9);
-  }, [url]);
+    const waitForData = async () => {
+      const rvData = postData.filter(
+        (flicks) => flicks.categories[0] === "rv-parks"
+      );
+      SetRvData(rvData);
+    };
+    waitForData().catch(console.error);
+}, [url, postData]);
+
 
   return (
     <>
-      <div className="title">
-        <h1 className="category_title">Featured Destinations</h1>
+      <div className="lakes">
+      <h1 className="category_title">Explore RV-Parks</h1>
         <div className="main">
           <section className="card-holder">
-            {postData &&
-              postData.slice(0, postDigit).map((post, index) => (
+            {rvData &&
+              rvData.slice(0, 3).map((post, index) => (
                 <div className="vi-card">
                   <Link
                     className="vi__route"
@@ -53,14 +62,16 @@ const Posts = ({ postData, Setpost }) => {
               ))}
           </section>
         </div>
-        <div className="add__more">
-              <button onClick={() => SetPostDigit(postDigit + 9)}>
-                <a className="footer__link">View More</a>
+        <div className="explore-more">
+        <Link to={"/explore/rv-parks"}> 
+              <button>
+                <a className="footer__link">View All RV-Parks</a>
               </button>
+              </Link>
             </div>
       </div>
     </>
   );
 };
 
-export default Posts;
+export default RV;

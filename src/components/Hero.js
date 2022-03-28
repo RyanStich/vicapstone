@@ -1,7 +1,8 @@
 import React from "react";
 import Posts from "./Posts";
+import { Link, useLocation } from "react-router-dom";
 
-const Hero = ({postData, Setpost}) => {
+const Hero = ({ postData, Setpost }) => {
   return (
     <div className="holder">
       <div className="hero-container">
@@ -11,13 +12,14 @@ const Hero = ({postData, Setpost}) => {
           ExploreVI is a digital guidebook, mapping all your favorite locations
           on Vancouver Island. built to serve you anywhere, at anytime!
         </p>
+
         <div className="button-group">
-          <a href="/">
+          <Link to="/explore">
             <button className="main_cta">Explore</button>
-          </a>
-          <a href="">
-            <button className="secondary_cta">View</button>
-          </a>
+          </Link>
+          <Link to="/search">
+            <button className="secondary_cta">Search</button>
+          </Link>
         </div>
       </div>
       <Posts postData={postData} Setpost={Setpost} />

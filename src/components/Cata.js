@@ -3,7 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const Cata = ({ postData, Setpost }) => {
   const [filteredData, setFilteredData] = useState([]);
+  const [postTitle, SetPostTitle] = useState([]);
+  const [postNumber, SetPostNumber] = useState(9);
   const url = useLocation();
+  let title = "test";
 
   // Async function to update our state, just incase a user refreshes on my site.
   useEffect(() => {
@@ -16,33 +19,70 @@ const Cata = ({ postData, Setpost }) => {
     waitForData().catch(console.error);
   }, [postData, url]);
 
+  useEffect(() => {
+    const getData = async () => {
+      const pageTitle = postData.map((flicks) => flicks.categories[0]);
+      SetPostTitle(pageTitle);
+    };
+    getData().catch(console.error);
+  }, [postData, url]);
+
+  let mytitle = url.pathname.slice(9);
+  const getMyTitle = postTitle.filter((item) => {
+    return item === mytitle;
+  });
+
+  useEffect(() => {
+    SetPostNumber(9);
+  }, [url]);
+
   return (
     <>
-      <div className="main">
-        <section className="card-holder">
-          {filteredData &&
-            filteredData.map((post, index) => (
-              <div className="vi-card">
-                <Link
-                  to={
-                    "/explore/" + post.categories[0] + "/" + post.slug.current
-                  }
-                  key={post.slug.current}
-                >
-                  <div className="card__img">
-                    <img
-                      src={post.mainImage.asset.url}
-                      alt={post.mainImage.alt}
-                    />
+      <div className="title">
+        <h1 className="category_title">Currently Exploring: {getMyTitle[0]}</h1>
+        <div className="main">
+          <section className="card-holder">
+            {filteredData &&
+              filteredData.slice(0, postNumber).map((post, index) => (
+                <div className="vi-card">
+                  <Link
+                    to={
+                      "/explore/" + post.categories[0] + "/" + post.slug.current
+                    }
+                    key={post.slug.current}
+                  >
+                    <div className="card__img">
+                      <img
+                        src={post.mainImage.asset.url}
+                        alt={post.mainImage.alt}
+                      />
+                    </div>
+                  </Link>
+                  <div className="card__body">
+                    <h3>{post.title}</h3>
+                    <p>{post.body[0].children[0].text}</p>
                   </div>
-                </Link>
-                <div className="card__body">
-                  <h3>{post.title}</h3>
-                  <p>{post.body[0].children[0].text}</p>
+                  <div className="card__footer">
+                    <button>
+                      <a href={post.link} className="footer__link">
+                        Map View
+                      </a>
+                    </button>
+                    <button>
+                      <a href={post.link} className="footer__link">
+                        View Destination
+                      </a>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
-        </section>
+              ))}
+          </section>
+        </div>
+        <div className="add__more">
+          <button onClick={() => SetPostNumber(postNumber + 9)}>
+            <a className="footer__link">View More</a>
+          </button>
+        </div>
       </div>
     </>
   );

@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import sanityClient from "../client";
 
-const Posts = ({ postData, Setpost }) => {
+const Beaches = ({ postData, Setpost }) => {
   const url = useLocation();
-  const [postDigit, SetPostDigit] = useState(9);
 
+  const [beachData, SetBeachData] = useState([]);
+
+
+  // Beach Data
   useEffect(() => {
-    SetPostDigit(9);
-  }, [url]);
+    const waitForData = async () => {
+      const dataBeach = postData.filter(
+        (flicks) => flicks.categories[0] === "beaches"
+      );
+      SetBeachData(dataBeach);
+    };
+    waitForData().catch(console.error);
+}, [url, postData]);
 
   return (
     <>
-      <div className="title">
-        <h1 className="category_title">Featured Destinations</h1>
+      <div className="lakes">
+      <h1 className="category_title">Explore Beaches</h1>
         <div className="main">
           <section className="card-holder">
-            {postData &&
-              postData.slice(0, postDigit).map((post, index) => (
+            {beachData &&
+              beachData.slice(0, 3).map((post, index) => (
                 <div className="vi-card">
                   <Link
                     className="vi__route"
@@ -53,14 +61,16 @@ const Posts = ({ postData, Setpost }) => {
               ))}
           </section>
         </div>
-        <div className="add__more">
-              <button onClick={() => SetPostDigit(postDigit + 9)}>
-                <a className="footer__link">View More</a>
+        <div className="explore-more">
+        <Link to={"/explore/beaches"}> 
+              <button>
+                <a className="footer__link">View All Beaches</a>
               </button>
+              </Link>
             </div>
       </div>
     </>
   );
 };
 
-export default Posts;
+export default Beaches;

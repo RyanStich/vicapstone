@@ -158,7 +158,6 @@ const Nav = ({ isActive, setActive }) => {
               onClick={toggleNav}
               class="checkbox"
               type="checkbox"
-              name="nav-checkbox"
               id="navbox"
             />
             <label htmlFor="navbox">Menu</label>

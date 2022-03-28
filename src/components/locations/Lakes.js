@@ -33,10 +33,7 @@ const Lakes = ({ postData, Setpost }) => {
                     key={post.slug.current}
                   >
                     <div className="card__img">
-                      <img
-                        src={post.mainImage.asset.url}
-                        alt={post.mainImage.alt}
-                      />
+                      <img src={post.mainImage.asset.url} alt="Card Image" />
                     </div>
                   </Link>
                   <div className="card__body">

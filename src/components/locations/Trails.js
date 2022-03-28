@@ -35,7 +35,7 @@ const Trails = ({ postData, Setpost }) => {
                     <div className="card__img">
                       <img
                         src={post.mainImage.asset.url}
-                        alt={post.mainImage.alt}
+                        alt="Card Image"
                       />
                     </div>
                   </Link>

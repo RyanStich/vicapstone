@@ -30,7 +30,7 @@ const Nav = ({ isActive, setActive }) => {
     <div className="wrap">
       <div className={`navbar ${navActive ? " " : "navbar__active"} `}>
         <div className="navbar__chunk">
-          <img id="logo" src={logo} alt="" className="logo" />
+          <img id="logo" src={logo} alt="ExploreVI Logo" className="logo" />
         </div>
         <div className="navbar__wrapper">
           <div className="navbar__inner">
@@ -47,7 +47,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="house" src={house} alt="" />
+                  <img id="house" alt="House Icon" src={house} />
                 </div>
                 <div className="link__item">Home</div>
               </NavLink>
@@ -59,7 +59,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="compass" src={compass} alt="" />
+                  <img id="compass" src={compass} alt="Compass Icon" />
                 </div>
                 <div className="link__item">Explore</div>
               </NavLink>
@@ -71,7 +71,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="search" src={search} alt="" />
+                  <img id="search" src={search} alt="Search Icon" />
                 </div>
                 <div className="link__item">Search</div>
               </NavLink>
@@ -92,7 +92,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="house" src={kayak} alt="" />
+                  <img id="house" src={kayak} alt="Kayak Icon" />
                 </div>
                 <div className="link__item">Lakes</div>
               </NavLink>
@@ -105,7 +105,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="compass" src={tent} alt="" />
+                  <img id="compass" src={tent} alt="Campsite Icon" />
                 </div>
                 <div className="link__item">Campsites</div>
               </NavLink>
@@ -118,7 +118,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="compass" src={bus} alt="" />
+                  <img id="compass" src={bus} alt="Bus Icon" />
                 </div>
                 <div className="link__item">RV Parks</div>
               </NavLink>
@@ -130,7 +130,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="compass" src={signs} alt="" />
+                  <img id="compass" src={signs} alt="Sign Icon" />
                 </div>
                 <div className="link__item">Beaches</div>
               </NavLink>
@@ -142,7 +142,7 @@ const Nav = ({ isActive, setActive }) => {
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="compass" src={backpack} alt="" />
+                  <img id="compass" src={backpack} alt="Backpack Icon" />
                 </div>
                 <div className="link__item">Trails</div>
               </NavLink>
@@ -172,7 +172,7 @@ const Nav = ({ isActive, setActive }) => {
             </div>
           </div>
           <Link to={"/"}>
-            <img id="logo" src={logo} alt="" className="logo" />
+            <img id="logo" src={logo} alt="ExploreVI Logo" className="logo" />
           </Link>
         </div>
         <div className="press-me" onClick={toggleMe}>
@@ -181,7 +181,7 @@ const Nav = ({ isActive, setActive }) => {
             id="arrow"
             className={menuActive ? "clickedit" : ""}
             src={arrow}
-            alt=""
+            alt="arrow icon"
           />
         </div>
 
@@ -191,7 +191,7 @@ const Nav = ({ isActive, setActive }) => {
             to="/explore/lakes"
             onClick={toggleMe}
           >
-            <img className="menucon" src={kayak} alt="" />
+            <img className="menucon" src={kayak} alt="Kayak Icon" />
             <a href="/lakes">Lakes</a>
           </Link>
           <Link
@@ -199,7 +199,7 @@ const Nav = ({ isActive, setActive }) => {
             to="/explore/campsites"
             onClick={toggleMe}
           >
-            <img className="menucon" src={tent} alt="" />
+            <img className="menucon" src={tent} alt="Campsite Icon" />
             <a href="">Campsites</a>
           </Link>
           <Link
@@ -207,7 +207,7 @@ const Nav = ({ isActive, setActive }) => {
             to="/explore/beaches"
             onClick={toggleMe}
           >
-            <img className="menucon" src={signs} alt="" />
+            <img className="menucon" src={signs} alt="Sign Icon" />
             <a href="">Beaches</a>
           </Link>
           <Link
@@ -215,7 +215,7 @@ const Nav = ({ isActive, setActive }) => {
             to="/explore/hiking"
             onClick={toggleMe}
           >
-            <img className="menucon" src={backpack} alt="" />
+            <img className="menucon" src={backpack} alt="Backpack Icon" />
             <a href="">Hiking</a>
           </Link>
         </div>

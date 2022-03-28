@@ -158,8 +158,8 @@ const Nav = ({ isActive, setActive }) => {
               onClick={toggleNav}
               class="checkbox"
               type="checkbox"
-              name=""
-              id=""
+              name="nav-checkbox"
+              id="navbox"
             />
             <div
               className={`hamburger-lines ${

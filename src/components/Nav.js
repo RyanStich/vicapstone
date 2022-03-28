@@ -161,6 +161,7 @@ const Nav = ({ isActive, setActive }) => {
               name="nav-checkbox"
               id="navbox"
             />
+            <label htmlFor="navbox">Menu</label>
             <div
               className={`hamburger-lines ${
                 navActive ? " " : "hambugger-lines"

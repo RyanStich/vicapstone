@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Cata = ({ postData, Setpost }) => {
   const [filteredData, setFilteredData] = useState([]);
   const [postTitle, SetPostTitle] = useState([]);
-  const [postNumber, SetPostNumber] = useState(9);
+  const [postNumber, SetPostNumber] = useState(6);
   const url = useLocation();
   let title = "test";
 
@@ -33,7 +33,7 @@ const Cata = ({ postData, Setpost }) => {
   });
 
   useEffect(() => {
-    SetPostNumber(9);
+    SetPostNumber(6);
   }, [url]);
 
   return (
@@ -63,15 +63,27 @@ const Cata = ({ postData, Setpost }) => {
                     <p>{post.body[0].children[0].text}</p>
                   </div>
                   <div className="card__footer">
-                    <button>
-                      <a href={post.link} className="footer__link">
+                    <button className="map__view">
+                      <a
+                        href={post.link}
+                        target="_blank"
+                        className="footer__link"
+                      >
                         Map View
                       </a>
                     </button>
-                    <button>
-                      <a href={post.link} className="footer__link">
+                    <button className="view__destination">
+                      <Link
+                        to={
+                          "/explore/" +
+                          post.categories[0] +
+                          "/" +
+                          post.slug.current
+                        }
+                        className="footer__link"
+                      >
                         View Destination
-                      </a>
+                      </Link>
                     </button>
                   </div>
                 </div>

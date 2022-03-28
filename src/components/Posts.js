@@ -38,15 +38,17 @@ const Posts = ({ postData, Setpost }) => {
                     <p>{post.body[0].children[0].text}</p>
                   </div>
                   <div className="card__footer">
-                    <button>
-                      <a href={post.link} className="footer__link">
+                    <button className="map__view">
+                      <a target="_blank"  href={post.link} className="footer__link">
                         Map View
                       </a>
                     </button>
-                    <button>
-                      <a href={post.link} className="footer__link">
+                    <button className="view__destination">
+                      <Link  to={
+                      "/explore/" + post.categories[0] + "/" + post.slug.current
+                    } className="footer__link">
                         View Destination
-                      </a>
+                      </Link>
                     </button>
                   </div>
                 </div>

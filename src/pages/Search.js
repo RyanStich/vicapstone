@@ -18,7 +18,7 @@ const Search = ({ postData, Setpost }) => {
           <h1>Search For Destinations</h1>
           <input
             type="text"
-            placeholder="Search Our Destinations"
+            placeholder="Find Your Destination..."
             onChange={(e) => {
               setSearchData(e.target.value);
             }}
@@ -27,10 +27,9 @@ const Search = ({ postData, Setpost }) => {
         <div className="search-hero-container">
           <h1>Find Your Destination</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            illum dolor cupiditate distinctio facere tenetur eveniet molestiae,
-            aspernatur enim veritatis, nesciunt quae maxime voluptatem deserunt?
-            Sint possimus vel reprehenderit delectus?
+            Looking for a specific destination? Fill out the search bar below
+            and find out if we have it in our database. Please contact us if we
+            are missing a location you would like to see listed!
           </p>
         </div>
       </div>
@@ -82,7 +81,6 @@ const Search = ({ postData, Setpost }) => {
                 </div>
               ))}
         </section>
-        <button></button>
       </div>
     </>
   );

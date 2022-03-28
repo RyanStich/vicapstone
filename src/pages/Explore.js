@@ -15,18 +15,15 @@ const Explore = ({ postData, Setpost }) => {
         <div className="explore-hero-container">
           <h1>Explore Destinations</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            illum dolor cupiditate distinctio facere tenetur eveniet molestiae,
-            aspernatur enim veritatis, nesciunt quae maxime voluptatem deserunt?
-            Sint possimus vel reprehenderit delectus?
+            Explore all the different categories we've got in store for you.
+            Whether its a weekend getaway, or a day-trip, ExploreVI has got you
+            covered
           </p>
         </div>
         <Lakes postData={postData} Setpost={Setpost} />
         <Camp postData={postData} Setpost={Setpost} />
         <RV postData={postData} Setpost={Setpost} />
         <Beaches postData={postData} Setpost={Setpost} />
-        <Parks postData={postData} Setpost={Setpost} />
-        <Hiking postData={postData} Setpost={Setpost} />
         <Trails postData={postData} Setpost={Setpost} />
       </div>
     </>

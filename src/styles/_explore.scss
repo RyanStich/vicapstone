@@ -106,3 +106,100 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
+@media only screen and (max-width: 1000px) {
+  .holder {
+    padding-top: 100px;
+    padding-left: 0px;
+    background-color: #1f2128;
+  }
+  .category_title {
+    font-size: 40px;
+    line-height: 1.39583;
+    color: white;
+    width: 72%;
+    overflow: hidden;
+    margin: 50px auto 25px auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  .holder .explore-hero-container h1 {
+    color: white;
+    font-size: 60px;
+    font-family: cubano, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+    width: 60%;
+  }
+  .holder .explore-hero-container p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+    margin: 30px 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .category_title {
+    font-size: 36px;
+    line-height: 1.39583;
+    color: white;
+    width: 72%;
+    overflow: hidden;
+    margin: 40px auto 15px auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  .holder .explore-hero-container h1 {
+    color: white;
+    font-size: 50px;
+    font-family: cubano, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+    width: 80%;
+  }
+  .holder .explore-hero-container p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+    margin: 20px 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .category_title {
+    font-size: 30px;
+    line-height: 1.39583;
+    color: white;
+    width: 72%;
+    overflow: hidden;
+    margin: 40px auto 15px auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  .holder .explore-hero-container h1 {
+    color: white;
+    font-size: 40px;
+    font-family: cubano, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 90%;
+    font-style: normal;
+  }
+  .holder .explore-hero-container p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    margin: 20px 0px;
+  }
+}

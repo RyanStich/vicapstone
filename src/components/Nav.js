@@ -16,14 +16,19 @@ import arrow from "../images/arrow.svg";
 
 const Nav = ({ isActive, setActive }) => {
   const [menuActive, SetMenuActive] = useState(false);
+  const [navActive, SetNavActive] = useState(true);
 
   const toggleMe = () => {
     menuActive ? SetMenuActive(false) : SetMenuActive(true);
   };
+  const toggleNav = () => {
+    navActive ? SetNavActive(false) : SetNavActive(true);
+  };
 
+  console.log(navActive);
   return (
     <div className="wrap">
-      <div className="navbar">
+      <div className={`navbar ${navActive ? " " : "navbar__active"} `}>
         <div className="navbar__chunk">
           <img id="logo" src={logo} alt="" className="logo" />
         </div>
@@ -35,6 +40,7 @@ const Nav = ({ isActive, setActive }) => {
                 <span>Explore</span>
               </div>
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/"
                 className={`menu__item ${(navData) =>
@@ -46,6 +52,7 @@ const Nav = ({ isActive, setActive }) => {
                 <div className="link__item">Home</div>
               </NavLink>
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/explore"
                 className={`menu__item ${(navData) =>
@@ -57,6 +64,7 @@ const Nav = ({ isActive, setActive }) => {
                 <div className="link__item">Explore</div>
               </NavLink>
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/search"
                 className={`menu__item ${(navData) =>
@@ -77,6 +85,7 @@ const Nav = ({ isActive, setActive }) => {
                 <span>All Categories</span>
               </div>
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/explore/lakes"
                 className={`menu__item ${(navData) =>
@@ -89,6 +98,7 @@ const Nav = ({ isActive, setActive }) => {
               </NavLink>
 
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/explore/campsites"
                 className={`menu__item ${(navData) =>
@@ -101,6 +111,7 @@ const Nav = ({ isActive, setActive }) => {
               </NavLink>
 
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/explore/rv-parks"
                 className={`menu__item ${(navData) =>
@@ -112,6 +123,7 @@ const Nav = ({ isActive, setActive }) => {
                 <div className="link__item">RV Parks</div>
               </NavLink>
               <NavLink
+                onClick={toggleNav}
                 end
                 to="/explore/beaches"
                 className={`menu__item ${(navData) =>
@@ -123,35 +135,14 @@ const Nav = ({ isActive, setActive }) => {
                 <div className="link__item">Beaches</div>
               </NavLink>
               <NavLink
-                end
-                to="/explore/parks"
-                className={`menu__item ${(navData) =>
-                  navData.isActive ? "active" : ""}`}
-              >
-                <div className="icon">
-                  <img id="compass" src={chairs} alt="" />
-                </div>
-                <div className="link__item">Parks</div>
-              </NavLink>
-              <NavLink
-                end
-                to="/explore/hiking"
-                className={`menu__item ${(navData) =>
-                  navData.isActive ? "active" : ""}`}
-              >
-                <div className="icon">
-                  <img id="compass" src={backpack} alt="" />
-                </div>
-                <div className="link__item">Hiking</div>
-              </NavLink>
-              <NavLink
+                onClick={toggleNav}
                 end
                 to="/explore/trails"
                 className={`menu__item ${(navData) =>
                   navData.isActive ? "active" : ""}`}
               >
                 <div className="icon">
-                  <img id="compass" src={forest} alt="" />
+                  <img id="compass" src={backpack} alt="" />
                 </div>
                 <div className="link__item">Trails</div>
               </NavLink>
@@ -161,6 +152,29 @@ const Nav = ({ isActive, setActive }) => {
         </div>
       </div>
       <div className="hero-nav">
+        <div className="mobile-nav">
+          <div class="container nav-container">
+            <input
+              onClick={toggleNav}
+              class="checkbox"
+              type="checkbox"
+              name=""
+              id=""
+            />
+            <div
+              className={`hamburger-lines ${
+                navActive ? " " : "hambugger-lines"
+              } `}
+            >
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+          </div>
+          <Link to={"/"}>
+            <img id="logo" src={logo} alt="" className="logo" />
+          </Link>
+        </div>
         <div className="press-me" onClick={toggleMe}>
           <p>Explore Popular Categories</p>
           <img
